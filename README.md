@@ -126,12 +126,12 @@ wtxn.commit(); // 25.1μs (fsync)
 ### **2. Query Optimization**
 ```mermaid
 flowchart TD
-    A[Query] --> B{Has Composite Fields?}
-    B -->|Yes| C[O(1) Index Lookup]
+    A[Query] --> B{Has Composite Fields}
+    B -->|Yes| C[O1 Index Lookup]
     B -->|No| D[Full Table Scan]
     C --> E[Parallel UUID Fetch]
     D --> F[Prefix Iteration]
-    E --> G[Sort + Paginate]
+    E --> G[Sort and Paginate]
     F --> G
 
 ```
