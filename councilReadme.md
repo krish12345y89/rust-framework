@@ -1,6 +1,5 @@
 
-````markdown
-# 🏛️ Planning Application Metadata Schema - Rust
+ # 🏛️ Planning Application Metadata Schema - Rust
 
 This Rust module defines a structured representation of planning application data, as typically retrieved from a government portal (e.g., UK planning application sites). It is ideal for parsing, validating, storing, or transmitting planning application data in a well-typed format.
 
@@ -9,6 +8,7 @@ This Rust module defines a structured representation of planning application dat
 ## 📦 Struct Overview
 
 ### 🔹 `MetaData`
+
 The root struct that wraps all other components of a planning application.
 
 ```rust
@@ -19,6 +19,7 @@ pub struct MetaData {
     pub further_information: FurtherInformation,
     pub councillor_contacts: Vec<CouncillorContact>,
 }
+
 ````
 
 ---
