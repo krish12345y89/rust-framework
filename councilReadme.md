@@ -18,8 +18,8 @@ pub struct MetaData {
     pub constraints: Vec<Constraint>,
     pub further_information: FurtherInformation,
     pub councillor_contacts: Vec<CouncillorContact>,
-    pub emails: Vec<String>,      
-    pub websites: Vec<String>,    
+    pub e_w: emails_websites
+ 
 }
 
 ````
@@ -77,6 +77,16 @@ Land or usage-based constraints for the property.
 | name             | String          | Name of the constraint         |
 | constraint\_type | String          | Type (e.g., "Green Belt")      |
 | status           | Option\<String> | Constraint status if available |
+
+---
+
+### 🚧 `Emails_Websites`
+
+| Field     | Type         | Description                  |
+| --------- | ------------ | ---------------------------- | 
+| emails    | Vec\<String> | Related email addresses      |
+| websites  | Vec\<String> | Related external websites    |
+| doc\_name | String       | Human-readable document name |
 
 ---
 
