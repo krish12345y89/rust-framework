@@ -1,4 +1,77 @@
 
+---
+
+## 🗂 Macro-Level Architecture Diagram (for README.md)
+
+```markdown
+## 🧭 Data Structure Diagram
+
+```
+
+MetaData
+│
+├── summary : Summary
+│   ├── summary : String
+│   ├── application\_received : String
+│   ├── appeal\_decision : String
+│   ├── decision : String
+│   ├── proposal : String
+│   ├── application\_validated : String
+│   ├── status : String
+│   ├── appeal\_status : String
+│   ├── decision\_issued\_date : String
+│   ├── reference : String
+│   └── address : String
+│
+├── important\_dates : ImportantDates
+│   ├── application\_received\_date : String
+│   ├── application\_validated\_date : String
+│   ├── actual\_committee\_date : Option<String>
+│   ├── neighbour\_consultation\_expiry\_date : Option<String>
+│   ├── standard\_consultation\_expiry\_date : Option<String>
+│   ├── latest\_advertisement\_expiry\_date : Option<String>
+│   ├── latest\_site\_notice\_expiry\_date : Option<String>
+│   ├── decision\_issued\_date : String
+│   ├── permission\_expiry\_date : String
+│   ├── determination\_deadline : String
+│   └── temporary\_permission\_expiry\_date : Option<String>
+│
+├── constraints : Vec<Constraint>
+│   ├── name : String
+│   ├── constraint\_type : String
+│   └── status : Option<String>
+│
+├── further\_information : FurtherInformation
+│   ├── application\_type : String
+│   ├── decision : String
+│   ├── actual\_decision\_level : String
+│   ├── expected\_decision\_level : String
+│   ├── case\_officer : String
+│   ├── parish : String
+│   ├── ward : String
+│   ├── district\_reference : Option<String>
+│   ├── applicant\_name : String
+│   ├── agent\_name : String
+│   ├── agent\_company\_name : String
+│   ├── agent\_address : String
+│   └── environmental\_assessment\_requested : bool
+│
+├── councillor\_contacts : Vec<CouncillorContact>
+│   ├── name : String
+│   ├── address : String
+│   └── email : String
+│
+└── emails\_websites : Emails\_Websites
+├── doc\_name : String
+├── emails : Vec<String>
+└── websites : Vec<String>
+
+```
+```
+
+---
+
+
  # 🏛️ Planning Application Metadata Schema - Rust
 
 This Rust module defines a structured representation of planning application data, as typically retrieved from a government portal (e.g., UK planning application sites). It is ideal for parsing, validating, storing, or transmitting planning application data in a well-typed format.
