@@ -18,7 +18,7 @@ pub struct MetaData {
     pub constraints: Vec<Constraint>,
     pub further_information: FurtherInformation,
     pub councillor_contacts: Vec<CouncillorContact>,
-    pub e_w: emails_websites
+    pub emails_websites: Emails_Websites
  
 }
 
