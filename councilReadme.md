@@ -194,6 +194,17 @@ let metadata = MetaData {
             email: "cllr.sgallagher@gateshead.gov.uk".into(),
         },
     ],
+    email_websites: {
+        doc_name: "Main Planning Document".to_string(),
+        emails: vec![
+            "planning@gov.uk".to_string(),
+            "agent@example.com".to_string(),
+        ],
+        websites: vec![
+            "https://planning.gov.uk/docs/123".to_string(),
+            "https://example.com/agent".to_string(),
+        ],
+    }
 };
 ```
 
