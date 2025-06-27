@@ -209,3 +209,100 @@ let metadata = MetaData {
 ```
 
 ---
+Here's a comprehensive macro-level architecture diagram for your planning application metadata system in Mermaid format, along with an explanation:
+
+```mermaid
+%% Planning Application Metadata - Macro Architecture
+flowchart TD
+    %% Main Components
+    A[Government Planning Portal API] -->|JSON Data| B(MetaData Parser)
+    B --> C[Core Structs]
+    C --> D{Storage Options}
+    D --> E[(Database)]
+    D --> F[File System]
+    C --> G{Output Formats}
+    G --> H[API Responses]
+    G --> I[PDF Reports]
+    G --> J[CSV Exports]
+    
+    %% Core Structs Breakdown
+    subgraph C[Core Structs]
+        C1[MetaData\nRoot Container]
+        C2[Summary\nBasic Info]
+        C3[ImportantDates\nTimeline]
+        C4[Constraints\nLand Use Rules]
+        C5[FurtherInformation\nExtended Details]
+        C6[CouncillorContacts\nRepresentatives]
+        C7[Emails_Websites\nCommunication]
+        
+        C1 --> C2
+        C1 --> C3
+        C1 --> C4
+        C1 --> C5
+        C1 --> C6
+        C1 --> C7
+    end
+    
+    %% System Interactions
+    K[User Applications] -->|Query| L{Business Logic}
+    L --> C
+    L --> M[Validation Engine]
+    M --> C4
+    M --> C3
+    C -->|Serialized Data| N[Third Party Systems]
+    
+    %% Legend
+    style A fill:#f9f,stroke:#333
+    style B fill:#bbf,stroke:#333
+    style C fill:#c9c,stroke:#333
+    style D fill:#f96,stroke:#333
+```
+
+### Diagram Explanation:
+
+1. **Data Flow** (Blue arrows):
+   - Starts with government API as the data source
+   - Flows through parser into core Rust structs
+   - Branches to storage and output formats
+
+2. **Core Structs** (Purple box):
+   - Shows `MetaData` as the root container
+   - Illustrates relationship with all component structs
+   - Each component maps to your defined structs
+
+3. **System Capabilities** (Orange boxes):
+   - Storage options (database/filesystem)
+   - Multiple output format generation
+   - Integration with business logic
+
+4. **Key Interactions**:
+   - Green validation engine ensuring constraint rules
+   - Pink user applications making queries
+   - External system integrations
+
+### Key Architectural Features Represented:
+
+1. **Modular Design**:
+   - Clear separation between data ingestion (parser)
+   - Core domain model (your structs)
+   - Output adapters (API/PDF/CSV)
+
+2. **Extensibility Points**:
+   - New storage options can be added
+   - Additional output formats supported
+   - Validation rules can be extended
+
+3. **Real-world Usage**:
+   - Government API → Your System → End Users
+   - Support for both automated and manual processes
+
+This diagram communicates:
+- How raw data becomes structured information
+- Where your Rust structs fit in the bigger picture
+- All major system capabilities at a glance
+- Key integration points with other systems
+
+Would you like me to add any specific:
+- Sequence diagrams for particular workflows?
+- Database schema relationships?
+- API endpoint mappings?
