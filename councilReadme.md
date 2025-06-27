@@ -1,7 +1,10 @@
+Bhai jo content tu bol raha hai "ese dikh raha hai" — woh iss liye ho raha hai kyunki tu `README.md` me text-block (`ASCII diagram`) bina proper markdown code-block ke paste kar raha hai.
+
+Yeh fix karne ke liye tu sirf isko triple backticks (` ``` `) ke andar wrap kar de. Jaise:
 
 ---
 
-## 🗂 Macro-Level Architecture Diagram (for README.md)
+## ✅ Corrected Diagram Format
 
 ```markdown
 ## 🧭 Data Structure Diagram
@@ -69,7 +72,10 @@ MetaData
 ```
 ```
 
----
+> ✅ Yeh ab GitHub pe perfect formatted dikhega.
+
+Chahe to yeh poora section tere README.md me paste kar de, ya agar chaahe to main pura `README.md` file bana kar bhi de sakta hoon.
+
 
 
  # 🏛️ Planning Application Metadata Schema - Rust
